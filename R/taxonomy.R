@@ -9,7 +9,7 @@
 
 get_taxonomy = function(gis){
 
-  gis = unique(as.character(gis))
+  gis = na.omit(unique(as.character(gis)))
   taxids = gi2taxid(gis)
 
   taxonomy=fetch_taxonomy(unique(taxids))
